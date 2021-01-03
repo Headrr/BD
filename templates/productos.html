@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indice.css') }}">
+</head>
+<body>
+    <h1>Productos</h1>
+
+
+    {% include "errores.html" %}
+
+    {% if productos|length > 0 %}
+        <ul>
+            {% for producto in productos %}
+            <li>{{ producto }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        No hay productos que mostrar
+    {% endif %}
+
+
+
+
+</body>
+</html>

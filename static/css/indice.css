@@ -1,0 +1,10 @@
+h1 {
+    background-color: yellow;
+}
+
+
+.error {
+    background-color: #fd5454a6;
+    color: white;
+    padding: 4px;
+}

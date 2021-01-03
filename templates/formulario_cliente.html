@@ -1,0 +1,38 @@
+{% if mensaje and salida %}
+
+    <h2>Mensaje: {{mensaje.getvalue()}}</h2>
+    <h3>Salida: {{salida.getvalue()}}</h3>
+
+{% endif %}
+
+
+<form action="{{ url_for('registrar') }}" method="GET">
+    <label for="rut"> RUT </label>
+    <input type="text" name="rut">
+
+    <br>
+
+    <label for="nombre">NOMBRE</label>
+    <input type="text" name="nombre">
+
+    <br>
+
+    <label for="apellidos">APELLIDOS</label>
+    <input type="text" name="apellidos">
+
+    <br>
+
+    <label for="correo">CORREO</label>
+    <input type="email" name="correo">
+
+    <br>
+
+    <label for="fecha_nac">FECHA NACIMIENTO</label>
+    <input type="text" name="fecha_nac">
+
+
+    <br>
+
+    <input type="submit" name="">
+
+</form>

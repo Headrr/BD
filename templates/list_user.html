@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', filename='css/bootstrap2.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    
+</head>
+<body>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        {% block navbar %}
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <img src="static/imagenes/bootstrap-solid.svg" alt="" width="30" height="24">   
+            <a class="navbar-brand" href="/.">BOTES</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url_for('autenticacion.iniciar_sesion') }}">  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('productos') }}">  <span class="sr-only">(current)</span></a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('registrar') }}"> Registrar </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('vitrina') }}"> Vitrina </a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="True">Disabled</a>
+                </li>
+                
+                </ul>
+            </div>
+            <a class="navbar-brand" href="{{ url_for('new_cliente') }}"> Registrarse </a>
+            <a class="navbar-brand" href=""> / </a>
+            <a class="navbar-brand" href="{{ url_for('autenticacion.iniciar_sesion') }}"> Iniciar sesion</a>
+          </nav>
+        {% endblock %}
+      
+    </header>
+ 
+</div>
+</body>
+</html>
